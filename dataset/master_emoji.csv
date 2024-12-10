@@ -1,0 +1,157 @@
+﻿ID,Emoji,Sentiment,Makna Emoji,Special Tag,tag_indo
+1,😛,negative,Face With Stuck-Out Tongue, <FACE WITH STUCK-OUT TOUNGES>,menghina
+2,😠,negative,Angry Face,<Angry Face>,marah
+3,💣,negative,Bomb,<Bomb>,bom
+4,💔,negative,Broken Heart,<Broken Heart>,patah hati
+5,😕,negative,Confused Face,<Confused Face>,bingung
+6,😞,negative,Disappointed Face,<Disappointed Face>,kecewa
+7,😑,negative,Expressionless Face,<Expressionless Face>,no comment
+8,😋,positive,Face Savouring Delicious Food,<Face Savouring Delicious Food>,lezat
+9,😱,positive,Face Screaming in Fear,<Face Screaming in Fear>,wow
+10,😓,negative,Face With Cold Sweat,<Face With Cold Sweat>,lelah
+12,😤,negative,Face With Steam From Nose,<Face With Steam From Nose>,kesal
+13,😝,negative,Face With Stuck-Out Tongue & Closed Eyes,<Face With Stuck-Out Tongue & Closed Eyes>,nakal
+14,😶,negative,Face Without Mouth,<Face Without Mouth>,bisu
+15,🔥,positive,Fire,<Fire>,bersemangat
+16,☹,negative,Frowning Face,<Frowning Face>,sedih
+17,😬,negative,Grimacing Face,<Grimacing Face>,gelisah
+18,⚡,negative,High Voltage,<High Voltage>,energik
+19,🤥,negative,Lying Face,<Lying Face>,bohong
+20,😣,negative,Persevering Face,<Persevering Face>,frustasi
+23,🐽,negative,Pig Nose,<Pig Nose>,hina
+24,😡,negative,Pouting Face,<Pouting Face>,marah
+25,🙈,negative,See-No-Evil Monkey,<See-No-Evil Monkey>,malu
+26,🙁,negative,Slightly Frowning Face,<Slightly Frowning Face>,kecewa
+27,🙊,negative,Speak-No-Evil Monkey,<Speak-No-Evil>,diam
+28,🤔,negative,Thinking Face,<Thinking Face>,pikir
+29,👎,negative,Thumbs Down,<Thumbs Down>,jelek
+30,👅,negative,Tongue,<Tongue>,menjilat
+31,😩,negative,Weary Face,<Weary Face>,kecewa
+32,🤐,negative,Zipper-Mouth Face,<Zipper-Mouth Face>,bungkam
+33,😐,negative,Neutral Face,<Neutral Face>,no comment
+34,🙄,negative,Face With Rolling Eyes,<Face With Rolling Eyes>,mendelik
+35,😏,negative,Smirking Face,<Smirking Face>,melirik
+36,😥,negative,Disappointed but Relieved Face,<Disappointed but Relieved Face>,cemas
+37,😯,negative,Hushed Face,<Hushed Face>,heran
+38,😪,negative,Sleepy Face,<Sleepy Face>,ngantuk
+39,😫,negative,Tired Face,<Tired Face>,kelelahan
+40,😴,negative,Sleeping Face,<Sleeping Face>,tidur
+41,😌,positive,Relieved Face,<Relieved Face>,lega
+42,😜,negative,Face With Stuck-Out Tongue & Winking EyeNegatif,<Face With Stuck-Out Tongue & Winking EyeNegatif>,usil
+43,🤤,positive,Drooling Face,<Drooling Face>,lezat
+44,😒,negative,Unamused Face,<Unamused Face>,sinis
+45,😔,negative,Pensive Face,<Pensive Face>,menyesal
+46,🙃,negative,Upside-Down Face,<Upside-Down Face>,terbalik
+47,🤑,negative,Money-Mouth Face,<Money-Mouth Face>,matrek
+48,😲,negative,Astonished Face,<Astonished Face>,terkesima
+49,😖,negative,Confounded Face,<Confounded Face>,tertekan
+50,😟,negative,Worried Face,<Worried Face>,khawatir
+51,😢,negative,Crying Face,<Crying Face>,menangis
+52,😭,negative,Loudly Crying Face,<Loudly Crying Face>,menangis
+53,😦,negative,Frowning Face With Open Mouth,<Frowning Face With Open Mouth>,cemas
+54,😧,negative,Anguished Face,<Anguished Face>,takut
+55,😨,negative,Fearful Face,<Fearful Face>,takut
+56,😰,negative,Face With Open Mouth & Cold Sweat,<Face With Open Mouth & Cold Sweat>,cemas
+57,😳,negative,Flushed Face,<Flushed Face>,malu
+58,😵,negative,Dizzy Face,<Dizzy Face>,pusing
+59,😷,negative,Face With Medical Mask,<Face With Medical Mask>,sakit
+60,🤒,negative,Face With Thermometer,<Face With Thermometer>,demam
+61,🤕,negative,Face With Head-Bandage,<Face With Head-Bandage>,sakit
+62,🤢,negative,Nauseated Face,<Nauseated Face>,mual
+63,🤧,negative,Sneezing Face,<Sneezing Face>,pilek
+64,🤓,positive,Nerd Face,<Nerd Face>,ketawa
+65,😈,negative,Smiling Face With Horns,<Smiling Face With Horns>,setan
+66,👿,negative,Angry Face With Horns,<Angry Face With Horns>,setan
+67,👹,negative,Ogre,<Ogre>,setan
+68,👺,negative,Goblin,<Goblin>,setan
+69,💀,negative,Skull,<Skull>,tengkorak
+70,☠,negative,Skull and Crossbones,<Skull and Crossbones>,bahaya
+71,👻,negative,Ghost,<Ghost>,setan
+72,💩,negative,Pile of Poo,<Pile of Poo>,tai
+74,😿,negative,Crying Cat Face,<Crying Cat Face>,sedih
+75,😾,negative,Pouting Cat Face,<Pouting Cat Face>,marah
+76,🙉,negative,Hear-No-Evil Monkey,<Hear-No-Evil Monkey>,nggak mau dengar
+77,🙎,negative,Person Pouting,<Person Pouting>,cemberut
+78,🙅,negative,Person Gesturing No,<Person Gesturing No>,tidak
+79,💁,negative,Person Tipping Hand,<Person Tipping Hand>,pelayan
+80,🤦,negative,Person Facepalming,<Person Facepalming>,menyesal
+81,🤷,negative,Person Shrugging,<Person Shrugging>,nggak tahu
+82,🤞,positive,Crossed Fingers,<Crossed Fingers>,sayang
+83,📉,negative,Chart Decreasing,<Chart Decreasing>,turun
+84,⛔,negative,No Entry,<No Entry>,dilarang
+85,✖,negative,Heavy Multiplication X,<Heavy Multiplication X>,salah
+86,❌,negative,Cross Mark,<Cross Mark>,salah
+87,❎,negative,Cross Mark Button,<Cross Mark Button>,salah
+88,👌,positive,OK Hand, <OK HAND>,siip
+89,👊,positive,Oncoming Fist, <Oncoming Fist>,"tinju, keren"
+90,🤘,positive,Sign of the Horns, <SIGN OF THE HORNS>,"rock, keren"
+91,😍,positive,Smiling Face With Heart-Eyes, <SMILING FACE WITH HEART-EYES>,cinta
+92,😊,positive,Smiling Face With Smiling Eyes, <Smiling Face With Smiling Eyes>,senang
+93,👍,positive,Thumbs Up, <THUMBS UP>,keren
+94,😹,positive,Cat Face With Tears of Joy,<Cat Face With Tears of Joy>,tertawa
+95,👏,positive,Clapping Hands,<Clapping Hands>,keren
+96,😘,positive,Face Blowing a Kiss,<Face Blowing a Kiss>,cinta
+97,😂,positive,face with tears of joy,<FACE WITH TEARS OF JOY>,ketawa
+98,🙏,positive,Folded Hands,<FOLDED HANDS>,berdoa
+99,✊,positive,Glory,<Glory>,jaya
+100,🌟,positive,Glowing Star,<Glowing Star>,bersinar
+101,😁,positive,grining face with smile eye,<grining face with smile eye>,tersenyum
+102,😀,positive,grining face,<grining face>,senang
+103,💘,positive,Heart With Arrow,<Heart With Arrow>,jatuh cinta
+104,✔,positive,Heavy Check Mark,<Heavy Check Mark>,benar
+105,🤗,positive,Hugging Face,<HUGGING FACE>,senang
+106,😚,positive,Kissing Face With Closed Eyes,<Kissing Face With Closed Eyes>,cium
+107,❤,positive,lovered,<lovered>,cinta
+108,🙋,positive,Person Raising Hand,<Person Raising Hand>,bisa
+109,🙌,positive,Raising Hands,<Raising Hands>,hore
+110,🤣,positive,Rolling on the Floor Laughing,<Rolling on the Floor Laughing>,senang
+111,😆,positive,Smiling Face With Open Mouth & Closed Eyes,<Smiling Face With Open Mouth & Closed Eyes>,tertawa
+112,😅,positive,Smiling Face With Open Mouth & Cold Sweat,<Smiling Face With Open Mouth & Cold Sweat>,senyum kecil
+113,😄,positive,Smiling Face With Open Mouth & Smiling Eyes,<Smiling Face With Open Mouth & Smiling Eyes>,tersenyum
+114,😎,positive,Smiling Face With Sunglasses,<Smiling Face With Sunglasses>,keren
+115,🏆,positive,Trophy,<Trophy>,juara
+116,✌,positive,Victory Hand,<Victory Hand>,damai
+117,😃,positive,Smiling Face With Open Mouth,<Smiling Face With Open Mouth>,senang
+118,😉,positive,Wingking Face,<Wingking Face>,kedip
+119,😗,positive,Kissing Face,<Kissing Face>,cium
+120,😙,positive,Kissing Face With Smiling Eyes,<Kissing Face With Smiling Eyes>,cium
+121,☺,positive,Smiling Face,<Smiling Face>,senang
+122,🙂,positive,Slightly Smiling Face,<Slightly Smiling Face>,senang
+123,😇,positive,Smiling Face With Halo,<Smiling Face With Halo>,baik
+124,🤠,positive,Cowboy Hat Face,<Cowboy Hat Face>,koboi
+125,🤡,positive,Clown Face,<Clown Face>,badut
+126,😺,positive,Smiling Cat Face With Open Mouth,<Smiling Cat Face With Open Mouth>,senang
+127,😸,positive,Grinning Cat Face With Smiling Eyes,<Grinning Cat Face With Smiling Eyes>,senang
+128,😻,positive,Smiling Cat Face With Heart-Eyes,<Smiling Cat Face With Heart-Eyes>,senang
+129,😼,positive,Cat Face With Wry Smile,<Cat Face With Wry Smile>,nakal
+130,😽,positive,Kissing Cat Face With Closed Eyes,<Kissing Cat Face With Closed Eyes>,cium
+131,👨‍🎓,positive,Man Student,<Man Student>,lulus
+132,👩‍🎓,positive,Woman Student,<Woman Student>,lulus
+134,👼,positive,Baby Angel,<Baby Angel>,baik
+135,👯🏻,positive,Woman With Bunny Ears Type-1-2,<Woman With Bunny Ears Type-1-2>,teman
+136,🙆🏻,positive,Person Gesturing OK Light Skin Tone,<Person Gesturing OK Light Skin Tone>,sayang
+137,💆,positive,Person Getting Massage,<Person Getting Massage>,pijat
+138,🚶,positive,Person Walking,<Person Walking>,jalan
+139,💃,positive,Woman Dancing,<Woman Dancing>,senang
+140,👭,positive,Two Women Holding Hands,<Two Women Holding Hands>,teman
+141,💏,positive,Kiss,<Kiss>,cinta
+142,💑,positive,Couple With Heart,<Couple With Heart>,cinta
+143,💪,positive,Flexed Biceps,<Flexed Biceps>,kuat
+144,🖐,positive,Raised Hand With Fingers Splayed,<Raised Hand With Fingers Splayed>,halo
+145,🤝,positive,Handshake,<Handshake>,sepakat
+146,💋,positive,Kiss Mark,<Kiss Mark>,cium
+147,💞,positive,Revolving Hearts,<Revolving Hearts>,sayang
+148,💝,positive,Heart With Ribbon,<Heart With Ribbon>,cinta
+149,💎,positive,Gem Stone,<Gem Stone>,berlian
+151,💐,positive,Bouquet,<Bouquet>,bunga
+152,🌹,positive,Rose,<Rose>,bunga
+156,🌞,positive,Sun With Face,<Sun With Face>,matahari
+157,⭐,positive,White Medium Star,<White Medium Star>,bintang
+158,🌈,positive,Rainbow,<Rainbow>,pelangi
+159,🎀,positive,Ribbon,<Ribbon>,pita
+160,🎁,positive,Wrapped Gift,<Wrapped Gift>,hadiah
+161,💡,positive,Light Bulb,<Light Bulb>,ide
+162,📈,positive,Chart Increasing,<Chart Increasing>,naik
+163,💯,positive,Hundred Points,<Hundred Points>,benar
+164,🆗,positive,OK Button,<OK Button>,benar
+165,👨🏽‍❤️‍💋‍👩🏼,positive,Kiss - Man Medium Skin Tone Woman MediumLight Skin Tone,<Kiss - Man Medium Skin Tone Woman MediumLight Skin Tone>,cium
