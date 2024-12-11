@@ -178,11 +178,11 @@ if diff_days >= 2:
 
             model = keras.models.load_model("model/sentiment_5.h5")
             # emot 
-            emoticon = pd.read_csv("master_emoji.csv")
+            emoticon = pd.read_csv("dataset/master_emoji.csv")
             emot_f= emoticon[["Emoji", "tag_indo", "Sentiment"]].copy()
 
             # slang normalize 
-            slang_dict = pd.read_csv('new_kamusalay.csv', encoding='latin-1', header=None)
+            slang_dict = pd.read_csv('dataset/new_kamusalay.csv', encoding='latin-1', header=None)
             slang_dict = slang_dict.rename(columns={0: 'original',
                                                 1: 'replacement'})
             # stop_words preprocessing 
