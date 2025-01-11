@@ -138,89 +138,89 @@ start_date = maksDate
 diff_days = (end_date - start_date).days
 counter_scrapper = diff_days*100
 
-if diff_days >= 2:
-    with st.expander("Update Data Dulu ya, sudah waktunya 😁"):
-        url = "https://docs.google.com/spreadsheets/d/1oTSMV4_VAoZEvU7-bHJLoKsg-mSGpFhxyFQLSOjl3VI"
-        conn = st.connection("gsheets", type=GSheetsConnection)
-        conn.read(spreadsheet=url, worksheet="temp", usecols=list(range(7)))
+# if diff_days >= 2:
+#     with st.expander("Update Data Dulu ya, sudah waktunya 😁"):
+#         url = "https://docs.google.com/spreadsheets/d/1oTSMV4_VAoZEvU7-bHJLoKsg-mSGpFhxyFQLSOjl3VI"
+#         conn = st.connection("gsheets", type=GSheetsConnection)
+#         conn.read(spreadsheet=url, worksheet="temp", usecols=list(range(7)))
 
-        st.write("Srapping on Progress")
-        review, token = reviews(
-            'com.bsm.activity2',
-            lang='id',
-            country='id',
-            sort = Sort.NEWEST,
-            filter_score_with=None,
-            count=counter_scrapper
-        )
-        review_df = pd.DataFrame(review)
-        st.write("Scrapping Done..")
-        if not review_df.empty:
-            review_df["datetime_baru"] = pd.to_datetime(review_df["at"])
-            review_df = review_df[(review_df["datetime_baru"].dt.date >= start_date) & (review_df["datetime_baru"].dt.date < end_date)]
-            date_scrap_bellow = min(review_df["datetime_baru"].dt.date)
+#         st.write("Srapping on Progress")
+#         review, token = reviews(
+#             'com.bsm.activity2',
+#             lang='id',
+#             country='id',
+#             sort = Sort.NEWEST,
+#             filter_score_with=None,
+#             count=counter_scrapper
+#         )
+#         review_df = pd.DataFrame(review)
+#         st.write("Scrapping Done..")
+#         if not review_df.empty:
+#             review_df["datetime_baru"] = pd.to_datetime(review_df["at"])
+#             review_df = review_df[(review_df["datetime_baru"].dt.date >= start_date) & (review_df["datetime_baru"].dt.date < end_date)]
+#             date_scrap_bellow = min(review_df["datetime_baru"].dt.date)
 
-            if date_scrap_bellow != (start_date):
-                st.write("Scrapping 2 on Progress")
-                review, token = reviews(
-                    'com.bsm.activity2',
-                    lang='id',
-                    country='id',
-                    sort = Sort.NEWEST,
-                    filter_score_with=None,
-                    count=counter_scrapper*2
+#             if date_scrap_bellow != (start_date):
+#                 st.write("Scrapping 2 on Progress")
+#                 review, token = reviews(
+#                     'com.bsm.activity2',
+#                     lang='id',
+#                     country='id',
+#                     sort = Sort.NEWEST,
+#                     filter_score_with=None,
+#                     count=counter_scrapper*2
                     
-                )
-                review_df = pd.DataFrame(review)
-                st.write("Scrapping 2 Done")
-                review_df["datetime_baru"] = pd.to_datetime(review_df["at"])
-                review_df = review_df[(review_df["datetime_baru"].dt.date >= start_date) & (review_df["datetime_baru"].dt.date < end_date)]
+#                 )
+#                 review_df = pd.DataFrame(review)
+#                 st.write("Scrapping 2 Done")
+#                 review_df["datetime_baru"] = pd.to_datetime(review_df["at"])
+#                 review_df = review_df[(review_df["datetime_baru"].dt.date >= start_date) & (review_df["datetime_baru"].dt.date < end_date)]
 
-            model = keras.models.load_model("model/sentiment_5.h5")
-            # emot 
-            emoticon = pd.read_csv("dataset/master_emoji.csv")
-            emot_f= emoticon[["Emoji", "tag_indo", "Sentiment"]].copy()
+#             model = keras.models.load_model("model/sentiment_5.h5")
+#             # emot 
+#             emoticon = pd.read_csv("dataset/master_emoji.csv")
+#             emot_f= emoticon[["Emoji", "tag_indo", "Sentiment"]].copy()
 
-            # slang normalize 
-            slang_dict = pd.read_csv('dataset/new_kamusalay.csv', encoding='latin-1', header=None)
-            slang_dict = slang_dict.rename(columns={0: 'original',
-                                                1: 'replacement'})
-            # stop_words preprocessing 
-            STOP_PREP = []
-            with open("stop_preprocessing.txt", "r") as infile:
-                STOP_PREP = infile.read().splitlines()
+#             # slang normalize 
+#             slang_dict = pd.read_csv('dataset/new_kamusalay.csv', encoding='latin-1', header=None)
+#             slang_dict = slang_dict.rename(columns={0: 'original',
+#                                                 1: 'replacement'})
+#             # stop_words preprocessing 
+#             STOP_PREP = []
+#             with open("stop_preprocessing.txt", "r") as infile:
+#                 STOP_PREP = infile.read().splitlines()
 
-            st.write("Preprocessing on Progress..")
-            stqdm.pandas()
-            review_df["Preprocess_Sentences"] = review_df["content"].progress_apply(preprocessing)
-            st.write("Handling Null..")
-            review_df = review_df[review_df["Preprocess_Sentences"].notna()]
-            review_df["sentences_wordCloud"] = review_df["Preprocess_Sentences"]
-            preprocess_sentences = review_df["Preprocess_Sentences"].tolist()
-            st.write("Padding on Progress..")
-            padding_sentences = teks_to_pad(preprocess_sentences)
-            st.write("Prediksi dimulai..")
-            result = model.predict(padding_sentences)
-            review_df["prob_keyakinan"] = result
-            review_df["sentiment"] = ["positive" if i >= 0.5 else "negative" for i in result]
-            st.write("All Data Have Been Succeed Processed..")
+#             st.write("Preprocessing on Progress..")
+#             stqdm.pandas()
+#             review_df["Preprocess_Sentences"] = review_df["content"].progress_apply(preprocessing)
+#             st.write("Handling Null..")
+#             review_df = review_df[review_df["Preprocess_Sentences"].notna()]
+#             review_df["sentences_wordCloud"] = review_df["Preprocess_Sentences"]
+#             preprocess_sentences = review_df["Preprocess_Sentences"].tolist()
+#             st.write("Padding on Progress..")
+#             padding_sentences = teks_to_pad(preprocess_sentences)
+#             st.write("Prediksi dimulai..")
+#             result = model.predict(padding_sentences)
+#             review_df["prob_keyakinan"] = result
+#             review_df["sentiment"] = ["positive" if i >= 0.5 else "negative" for i in result]
+#             st.write("All Data Have Been Succeed Processed..")
 
-            review_df = review_df[["content", "score", "sentences_wordCloud", "Preprocess_Sentences", "prob_keyakinan", "sentiment", "datetime_baru"]]
-            review_df.columns = ["Sentences", "score", "sentences_wordCloud", "Preprocess_Sentences", "prob_keyakinan", "sentiment", "datetime_baru"]
-            review_df["score"] = review_df["score"].astype(int)
-            review_df["prob_keyakinan"] = review_df["prob_keyakinan"].astype(float)
-            data = pd.concat([df1_tambahan, review_df])
-            # karena tadi diambil data sehari sebelum data yang sudah ada di database, akan di drop yang sama (hampir dipastikan ada duplikat)
-            data = data.drop_duplicates(keep=False)
-            data = data.sort_values("datetime_baru")
-            data["datetime_baru"] = data["datetime_baru"].astype(str)
-            conn.update(worksheet="temp", data=data)
-            st.write("Append To Database Succcess !")
-            df1_tambahan = load_data(id, sheet_name)
-            df1_tambahan["datetime_baru"]= pd.to_datetime(df1_tambahan["datetime_baru"])
-            df1_tambahan["score"] = df1_tambahan["score"].astype(int)
-        else:
-            st.write("Tidak ada Data Masuk 😅")
+#             review_df = review_df[["content", "score", "sentences_wordCloud", "Preprocess_Sentences", "prob_keyakinan", "sentiment", "datetime_baru"]]
+#             review_df.columns = ["Sentences", "score", "sentences_wordCloud", "Preprocess_Sentences", "prob_keyakinan", "sentiment", "datetime_baru"]
+#             review_df["score"] = review_df["score"].astype(int)
+#             review_df["prob_keyakinan"] = review_df["prob_keyakinan"].astype(float)
+#             data = pd.concat([df1_tambahan, review_df])
+#             # karena tadi diambil data sehari sebelum data yang sudah ada di database, akan di drop yang sama (hampir dipastikan ada duplikat)
+#             data = data.drop_duplicates(keep=False)
+#             data = data.sort_values("datetime_baru")
+#             data["datetime_baru"] = data["datetime_baru"].astype(str)
+#             conn.update(worksheet="temp", data=data)
+#             st.write("Append To Database Succcess !")
+#             df1_tambahan = load_data(id, sheet_name)
+#             df1_tambahan["datetime_baru"]= pd.to_datetime(df1_tambahan["datetime_baru"])
+#             df1_tambahan["score"] = df1_tambahan["score"].astype(int)
+#         else:
+#             st.write("Tidak ada Data Masuk 😅")
  
 df11 = pd.read_csv("dataset/ps_processing.csv")
 df11["datetime_baru"] = pd.to_datetime(df11["datetime_baru"])
